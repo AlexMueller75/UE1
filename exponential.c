@@ -16,5 +16,18 @@ int main() {
 }
 
 double exponential(double x, double epsilon) {
-// function exponential
+    int k;
+    int j;
+    double curSum = 1;
+    double nextSum = 1;
+    double erg = curSum;
+     
+    for(k=2;((nextSum > curSum)||(curSum > epsilon));k++) {
+        erg=0;
+        curSum=nextSum;
+        for(j=1;j<k+1;j++) {
+            nextSum=nextSum + pow(x,j)/tgamma(j+1);
+        }
+    }
+    return erg;
 }
