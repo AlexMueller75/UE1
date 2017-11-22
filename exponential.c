@@ -15,6 +15,7 @@ int main() {
     printf("Ergebnis: %lf \nFehler: %lf\n",exponential(x,e), fabs(pow(M_E, x) - exponential(x,e)));
 }
 
+// Diese Funktion kann effizienter implementiert werden (versuchen Sie die Partialsummen zwischenzuspeichern!)
 double exponential(double x, double epsilon) {
     int k;
     int j;
